@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Moving</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar Start -->
+      <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+          <a
+            href="index.html"
+            class="navbar-brand d-flex align-items-center text-center"
+          >
+            <div class="icon p-2 me-2">
+              <img
+                class="formoble img-fluid"
+                src="img/logo1.png"
+                alt="logo"
+                style="width: 230px; height: 230px"
+              />
+            </div>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+          <i class="fas fa-bars" style="color: white;"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link active">Home</a>
+        
+              <a href="service.html" class="nav-item nav-link">Service</a>
+              <a href="maintenance.html" class="nav-item nav-link"
+                >Maintenance</a
+              >
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <!-- <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a> -->
+          </div>
+        </nav>
+      </div>
+
+      <!-- Navbar End -->
+      
+      <!-- Header Start -->
+
+      <div class="container-fluid header bg-white p-0">
+        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+          <div class="col-md-6 p-5 mt-lg-5">
+            <h1 class="display-5 animated fadeIn mb-4">
+              <span class="text-primary">Find A </span
+              ><span style="color: #ffbd59">Moving Expert</span>
+            </h1>
+            <p class="animated fadeIn mb-4 pb-2">
+              Welcome to Moving and Packing Expert, where we turn the complexities of moving into a hassle-free experience. Our dedicated team is here to make your relocation within Canada smooth and stress-free. From coast to coast, we're your go-to moving experts.
+            </p>
+            <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn"
+              >Book Your Move</a
+            >
+          </div>
+          <div class="col-md-6 animated fadeIn">
+            <div class="owl-carousel header-carousel">
+              <div class="owl-carousel-item">
+                <img
+                  class="img-fluid"
+                  src="img/Moving & Packing Expert (2).png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header End -->
+
+      <!-- Search Start -->
+      <div
+        class="container-fluid bg-primary mb-5 wow fadeIn"
+        data-wow-delay="0.1s"
+        style="padding: 35px"
+      >
+        <div class="container">
+          <div class="row g-2">
+            <div style="text-align: center; color: white">
+              <h1><spann style="color: white">Book Your Move Now</spann></h1>
+              <p>
+                Fill out the form below to book your stress-free move. Our team is ready to make your moving experience seamless and efficient.
+              </p>
+            </div>
+            <div class="row g-2">
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  id="location"
+                  class="form-control border-0 py-3"
+                  placeholder="Location"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="date"
+                  id="serviceDate"
+                  class="form-control border-0 py-3"
+                  placeholder="Service Date"
+                />
+              </div>
+              <div class="col-md-4">
+          
+                <select
+                  id="startTime"
+                  class="form-select border-0 py-3"
+                  aria-label="Default select example"
+                >
+                  <option selected>Start Time</option>
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                  <option>Evening</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <select
+                  id="propertytype" 
+                  class="form-select border-0 py-3"
+                  aria-label="Default select example"
+                >
+                  <option selected>Property Type</option>
+                  <option>Appartment</option>
+                  <option>House</option>
+                  <option>Office</option>
+             
+                </select>
+              </div>
+             
+              <div class="col-md-4">
+                <input
+                  type="number"
+                  id="storfloor"
+                  class="form-control border-0 py-3"
+                  placeholder="Story/Floor"
+                />
+              </div>
+              <div class="col-md-4">
+                <select
+                  id="elevator"
+                  class="form-select border-0 py-3"
+                  aria-label="Default select example"
+                >
+                  <option selected>Elevator Available</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <div
+                  
+                  style="background-color: white"
+                  class="form-control border-0 py-2"
+                >
+                  <label><b>Select Service</b></label>
+
+                  <div
+                    class="formbl"
+                    style="display: flex; justify-content: space-between"
+                  >
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Loading/Unloading
+                    </label>
+                    <input
+                      class="form-check-input border-0"
+                      type="checkbox"
+                      onclick="this.value=this.checked?'Yes':'No';"
+                      id="serviceLoadingUnloading"
+                      style="background-color: #ffbd59"
+                    />
+                  </div>
+
+                  <div
+                    class="formbl"
+                    style="display: flex; justify-content: space-between"
+                  >
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Packing/Unpacking
+                    </label>
+                    <input
+                      class="formbl form-check-input border-0"
+                      type="checkbox"
+                      onclick="this.value=this.checked?'Yes':'No';"
+                      id="servicePackingUnpacking"
+                      style="background-color: #ffbd59; margin-left: 40px"
+                    />
+                  </div>
+
+                  <div
+                    class=""
+                    style="display: flex; justify-content: space-between"
+                  >
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Cleaning Service
+                    </label>
+                    <input
+                      class="formbl form-check-input border-0"
+                      type="checkbox"
+                      onclick="this.value=this.checked?'Yes':'No';"
+                      id="cleaningService"
+                      style="background-color: #ffbd59; margin-left: 60px"
+                    />
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 ">
+                <div
+                  style="background-color: white"
+                  class="form-control border-0 py-2"
+                >
+                  <label><b>Special Service</b></label>
+                  <div style="display: flex; justify-content: space-between">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Piano Moving
+                    </label>
+                    <input
+                      class="form-check-input border-0"
+                      type="checkbox"
+                      onclick="this.value=this.checked?'Yes':'No';"
+                      id="pianoMoving"
+                      style="background-color: #ffbd59"
+                    />
+                  </div>
+
+                  <div style="display: flex; justify-content: space-between">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Gun Safe Moving
+                    </label>
+                    <input
+                      class="form-check-input border-0"
+                      type="checkbox"
+                      onclick="this.value=this.checked?'Yes':'No';"
+                      id="gunMoving"
+                      style="background-color: #ffbd59"
+                    />
+                  </div>
+                  <div style="display: flex; justify-content: space-between">
+                    <label class="form-check-label" for="flexCheckDefault">
+                     U-Box Container
+                    </label>
+                    <input
+                      class="form-check-input border-0"
+                      type="checkbox"
+                      onclick="this.value=this.checked?'Yes':'No';"
+                      id="uboxcontainer"
+                      style="background-color: #ffbd59"
+                    />
+                  </div>
+                  
+                </div>
+              </div>
+
+            
+              <div class="col-md-6">
+                <input
+                  type="number"
+                  id="numOfHours"
+                  class="form-control border-0 py-3"
+                  placeholder="Number of hours"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="number"
+                  id="numOfCrew"
+                  class="form-control border-0 py-3"
+                  placeholder="Number of crew"
+                />
+              </div>
+            
+              <div class="col-md-12">
+                <a href="Total.html">
+                  <button
+            
+                  class="btn btn-primary border-0 w-100 py-3"
+                >
+                  Compare Movers
+                </button>
+                </a>
+           
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Search End -->
+
+      <!-- Category Start -->
+      <div id="serviceSection" class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-3">Our Services</h1>
+           
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/1.png" alt="Icon" />
+                  </div>
+                  <h6>Loading/Unloading</h6>
+                  <span
+                    >Our expert movers handle your belongings with care, ensuring a smooth transition to your new location.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/4.png" alt="Icon" />
+                  </div>
+                  <h6>Packing/Unpacking</h6>
+                  <span
+                    >Expert care in every detail. Let us handle the intricacies of packing, ensuring a smooth transition for your move.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/5.png" alt="Icon" />
+                  </div>
+                  <h6>Cleaning</h6>
+                  <span
+                    >Elevate your move with our premier cleaning service. We ensure your new home is as pristine as your journey with us.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+              <a class="cat-item d-block text-center rounded p-3">
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/7.png" alt="Icon" />
+                  </div>
+                  <h6>Piano Moving</h6>
+                  <span
+                    >Trust our expert team for seamless Piano Moving services. Your musical masterpiece, handled with care.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/8.png" alt="Icon" />
+                  </div>
+                  <h6>Gun Safe Moving</h6>
+                  <span
+                    >Expert handling for your peace of mind. Trust us for a seamless gun safe moving experience.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/9.png" alt="Icon" />
+                  </div>
+                  <h6>U-Box Container</h6>
+                  <span
+                    >Secure your belongings in our U-Box containers for a smooth and convenient moving experience.</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Category End -->
+
+      <!-- Category Start -->
+      <div id="typeOfMove" class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-3">Type Of Move</h1>
+      
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/11.png" alt="Icon" />
+                  </div>
+                  <h6>Home</h6>
+                  <span
+                    >Trust us for stress-free home relocations. From packing to setup, we handle it all.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/12.png" alt="Icon" />
+                  </div>
+                  <h6>Apartment </h6>
+                  <span
+                    >Seamless transitions from your old space to the new. Trust us for a stress-free apartment moving experience.</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+              <a
+                class="cat-item d-block bg-light text-center rounded p-3"
+                href=""
+              >
+                <div class="rounded p-4">
+                  <div class="icon mb-3">
+                    <img class="img-fluid2" src="img/13.png" alt="Icon" />
+                  </div>
+                  <h6>Office</h6>
+                  <span
+                    >Elevate your business with our specialized office moving services. Smooth, efficient, and disruption-free move.</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Category End -->
+
+      <!-- About Start -->
+      <!-- <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid w-100" src="img/about.jpg">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4">Professional Movers</h1>
+                        <p class="mb-4">We believe that every move is a new journey in your life and should be treated that way. The home you saved up for, and the memories you’re about to create, should be greeted with great enthusiasm and expectation. It’s about the next chapter in your life that will be looked back on in the years to come.t</p>
+                         <h1 class="mb-4">And here’s the good news.</h1>
+                         <p>Moving does not have to be stressful at all. In fact, it can actually be an easy process. It may sound counter-intuitive but moving to a new house can actually be easier than buying a new car (or a used one, if you prefer). Not convinced? Allow us to change your mind.</p>
+                        <a class="btn btn-primary py-3 px-5 mt-3" href="">Book Your Move</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+      <!-- About End -->
+
+      <!-- Call to Action Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded p-3">
+            <div
+              class="bg-white rounded p-4"
+              style="border: 1px dashed rgba(0, 185, 142, 0.3)"
+            >
+              <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                  <img
+                    class="img-fluid rounded w-100"
+                    src="img/Moving & Packing Expert, Support Image.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                  <div class="mb-4">
+                    <h1 class="mb-3">Have questions or concerns? </h1>
+                    <p>
+                      Our dedicated support team is here 24/7 to assist you. Your peace of mind is our priority.
+                    </p>
+                  </div>
+                  <a href="" class="btn btn-dark  py-3 px-4 me-2"
+                    ><i class="fa fa-phone-alt me-2"></i>Make A Call</a
+                  >
+                  <a href="" class="btn  btn-primary py-3 px-4"
+                    ><i class="fa fa-calendar-alt me-2"></i>Book Your Move</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Call to Action End -->
+
+  <!-- Testimonial Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Our Clients Say!</h1>
+           
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-3">
+                <div class="bg-white border rounded p-4">
+                    <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                    <div class="d-flex align-items-center">
+                        <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                        <div class="ps-3">
+                            <h6 class="fw-bold mb-1">Client Name</h6>
+                            <small>Profession</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Get In Touch</h5>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York,
+                USA
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>info@example.com
+              </p>
+            
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Quick Links</h5>
+              <a class="btn btn-link text-white-50" href="">Home</a>
+              <a class="btn btn-link text-white-50" href="">Service</a>
+              <a class="btn btn-link text-white-50" href="">Maintenance</a>
+              <a class="btn btn-link text-white-50" href="">About</a>
+              <a class="btn btn-link text-white-50" href=""
+                >Contact</a
+              >
+            </div>
+         
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Services</h5>
+              <a class="btn btn-link text-white-50" href="#serviceSection">Loading/Unloading</a>
+              <a class="btn btn-link text-white-50" href="#serviceSection">Packing/Unpacking</a>
+              <a class="btn btn-link text-white-50" href="#serviceSection">Cleaning</a>
+              <a class="btn btn-link text-white-50" href="#serviceSection">Piano Cleaning</a>
+              <a class="btn btn-link text-white-50" href="#serviceSection"
+                >Gun Safe Moving</a
+              >
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Type of Move</h5>
+              <a class="btn btn-link text-white-50" href="#typeOfMove">Home</a>
+              <a class="btn btn-link text-white-50" href="#typeOfMove">Appartment</a>
+              <a class="btn btn-link text-white-50" href="#typeOfMove">Office</a>
+          
+             
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-12 text-center mb-3 mb-md-0">
+                &copy; <a class="" href="#">Moving</a>, All Right Reserved.
+
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                Developed By <a class="" href="https://cworld.com">CWORLD</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="Total.js"></script>
+  </body>
+</html>
