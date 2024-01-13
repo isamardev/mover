@@ -6,6 +6,9 @@
     --dark: #FFBD59;
 }
 
+body{
+    background-color: transparent !important;
+}
 .back-to-top {
     position: fixed;
     display: none;
