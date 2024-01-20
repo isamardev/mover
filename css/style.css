@@ -496,3 +496,10 @@ flex-wrap: wrap;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
+
+.optionforbgcolor:hover {
+    background-color: #00ff00 !important; /* Change this to your desired click background color (green in this case) */
+}
+
+
+  
